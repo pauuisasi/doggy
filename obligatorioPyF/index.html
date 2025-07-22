@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> DOGGY</title>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,100..1000;1,100..1000&family=Bebas+Neue&family=Bytesized&family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=New+Amsterdam&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Special+Gothic+Condensed+One&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+
+<body>
+
+  <!-- BIENVENIDA -->
+  <div id="bienvenida" class="bienvenida">
+    <div class="bienvenida-contenido">
+      <span class="cerrar" id="cerrarBtn">&times;</span>
+      <h2>¡Bienvenid@ a Nuestra App!</h2>
+      <p>Gracias por visitarnos, esperamos que tengas una excelente experiencia.</p>
+    </div>
+  </div>
+
+
+
+  <!-- NAV BAR -->
+
+  <header>
+    <img src="logoperro-Photoroom.png" alt="Logo" class="logo">
+    <nav>
+      <ul id="navPrincipal">
+        <li id="btnseccionIngresar" class="boton cliente">
+          <a>Crear Cuenta</a>
+        </li>
+        <li id="btnseccionIniciar" class="boton cliente">
+          <a>Iniciar Sesion</a>
+        </li>
+        <li id="btnlistaPaseadores" class="boton paseador" style="display:none;">
+          <a>Contratar Servicios</a>
+        </li>
+        <li id="btnseccionSolicitudes" class="boton paseador" style="display:none;">
+          <a>Aceptar Solicitudes</a>
+        </li>
+
+        <li id="btnverPerrosAsignados" class="boton paseador" style="display:none;">
+          <a>Ver Perros Asignados</a>
+        </li>
+
+
+        <li id="btnCerrarSesion" style="display:none;">
+          <a> <img src="cerrar-sesion.png" alt="Cerrar sesión" class="logoCerrar"></a>
+        </li>
+
+      </ul>
+    </nav>
+  </header>4
+
+  <div id="contenedor">
+
+    <!-- REGISTRO DE SESION -->
+    <div id="seccionIngresar" class="seccion" style="display:none;">
+      <div class="contenedorLogin">
+        <section class="formularioLado">
+          <h2>Crear cuenta</h2>
+          <p>Por favor complete todos los datos </p>
+
+          <label for="Username">Usuario</label>
+          <input type="text" id="Username" placeholder="pau123" />
+
+          <label for="NombreDelPerro">Nombre del perro</label>
+          <input type="text" id="NombreDelPerro" placeholder="Rocco" />
+
+          <label for="tamanioPerroslc">Tamaño </label>
+          <select id="tamanioPerroslc">
+            <option value="none">Seleccione</option>
+            <option value="G">Grande</option>
+            <option value="M">Mediano</option>
+            <option value="C">Chico</option>
+          </select>
+
+          <label for="Contrasenia">Contraseña</label>
+          <input type="password" id="Contrasenia" placeholder="••••••••" />
+
+          <div class="terminos">
+            <p>Estoy de acuerdo con los términos y condiciones de usuario</p>
+            <input type="checkbox" id="Terms" />
+          </div>
+
+          <button id="btnContinuar">Continuar</button>
+        </section>
+
+        <div class="imagenLado">
+          <img src="logo22.jpg" alt="Foto de paseo de perros" />
+        </div>
+      </div>
+    </div>
+
+    <!-- INICIO DE SESION -->
+    <div id="seccionIniciar" class="seccion" style="display:none;">
+      <h2>Ingresar Cuenta</h2>
+      <label for="slctipoDeUsuario">Tipo de Usuario:</label>
+      <select id="slctipoDeUsuario">
+        <option value="none">Seleccione una opcion</option>
+        <option value="C">Cliente</option>
+        <option value="P">Paseador</option>
+      </select>
+      <br />
+      <label for="Usuario">Nombre de usuario</label>
+      <input type="text" id="Usuario" />
+      <br />
+      <label for="ContraseniaGral">Contraseña</label>
+      <input type="password" id="ContraseniaGral" />
+      <br />
+      <div id="terms2">
+
+        <p>Recordar Contraseña</p>
+        <input type="checkbox" id="Rem" />
+      </div>
+
+      <br />
+      <input type="button" value="Entrar" id="btnRegistrarse" />
+      <br />
+      <p>
+        Ingresar con
+        <a href="https://www.google.com/?hl=es">Google</a>
+        <a href="https://www.facebook.com/">Facebook</a>
+      </p>
+    </div>
+
+    <!-- LISTA DE PASEADORES -->
+    <div id="listaPaseadores" class="seccion" style="display:none;">
+      <div class="Grilla1">
+        <!-- Aquí se mostrarán los paseadores -->
+      </div>
+    </div>
+
+
+
+    <!-- SOLICITUDES PENDIENTES -->
+
+    <section id="seccionSolicitudes" class="seccion" style="display:none;">
+      <h2>Solicitudes Pendientes</h2>
+      <div class="contenedorSolicitudes"></div>
+    </section>
+
+
+    <!-- PERROS ASIGNADOS -->
+
+    <section id="verPerrosAsignados" class="seccion" style="display:none">
+      <h2>Perros asignados</h2>
+      <div class="contenedorAsignados"></div>
+    </section>
+
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-content">
+          <div class="footer-section about">
+            <h2>Sobre Nosotros</h2>
+            <p>Somos una plataforma dedicada a conectar dueños de perros con paseadores profesionales. Nuestro objetivo
+              es garantizar el bienestar y la felicidad de tu mascota.</p>
+          </div>
+          <div class="footer-section links">
+            <h2>Enlaces Rápidos</h2>
+            <ul>
+              <li><a href="#seccionIngresar">Inicio</a></li>
+              <li><a href="#seccionIngresar">Ingresar</a></li>
+              <li><a href="#">Contacto</a></li>
+              <li><a href="#">Términos y Condiciones</a></li>
+            </ul>
+          </div>
+          <div class="footer-section contact">
+            <h2>Contacto</h2>
+            <p>Email: contacto@paseadores.com</p>
+            <p>Teléfono: +123 456 7890</p>
+            <div class="socials">
+              <a href="#"><img src="facebook.png" alt="Facebook"></a>
+              <a href="#"><img src="x.png" alt="Twitter"></a>
+              <a href="#"><img src="instagram.png" alt="Instagram"></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Paseadores. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+
+
+
+
+
+  <!-- SCRIPT -->
+  <script src="codigo.js"></script>
+</body>
+
+</html>
